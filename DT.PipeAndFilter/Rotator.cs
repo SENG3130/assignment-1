@@ -46,12 +46,12 @@ namespace DT.PipeAndFilter
                 input.RemoveFirst();
 
                 // Rotate the record by one word.
-                int index = record.LastIndexOf(" ");
+                int index = record.IndexOf(" ");
                 if (index != -1)
                 {
                     // If guards against empty cases.
                     string recordShift = record.Substring(index + 1) + " " + record.Substring(0, index);
-                    //Console.WriteLine(recordShift);
+                    Console.WriteLine(recordShift);
                     
                     // Check if the first char is the end of line delimiter ( / ).
                     if (recordShift[0] != '/')
@@ -59,9 +59,10 @@ namespace DT.PipeAndFilter
                         numPermutations++;
                         input.AddLast(recordShift);
                         
-                        // Remove end of line delimeter and send to output queue
-                        output.AddLast(recordShift.Replace("/ ", "").Replace(" /",""));
+                        
                     }
+                    // Remove end of line delimeter and send to output queue
+                    output.AddLast(recordShift.Replace("/ ", "").Replace(" /",""));
                 }
             }
         }

@@ -30,9 +30,9 @@ namespace DT.PipeAndFilter
             Rotator filter1 = new Rotator(list1, list2);
             Indexor filter2 = new Indexor(list2, list3);
 
-            list1.AddLast("/ Pattern-Orientated Software Architecture");
-            list1.AddLast("/ Software Architecture");
-            list1.AddLast("/ Introducing Design Patterns");
+            list1.AddLast("Pattern-Orientated Software Architecture /");
+            list1.AddLast("Software Architecture /");
+            list1.AddLast("Introducing Design Patterns /");
 
             Thread rotateThread1 = new Thread(delegate () { filter1.Rotate(); });
             Thread indexThread1  = new Thread(delegate () { filter2.Index(); });
