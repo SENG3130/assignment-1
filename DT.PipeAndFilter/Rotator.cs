@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace DT.PipeAndFilter
@@ -36,8 +37,13 @@ namespace DT.PipeAndFilter
             numPermutations = 0;
         }
 
-        public void Rotate()
+        public void Start()
         {
+            while (input.Count == 0)
+            {
+                Thread.Sleep(20);
+            }
+
             // Continually loop until the input queue is empty.
             while (input.Count > 0)
             {
@@ -58,18 +64,11 @@ namespace DT.PipeAndFilter
                     {
                         numPermutations++;
                         input.AddLast(recordShift);
-                        
-                        
                     }
                     // Remove end of line delimeter and send to output queue
                     output.AddLast(recordShift.Replace("/ ", "").Replace(" /",""));
                 }
             }
-        }
-
-        public void AddToInput(string obj)
-        {
-            input.AddLast(obj);
         }
     }
 }

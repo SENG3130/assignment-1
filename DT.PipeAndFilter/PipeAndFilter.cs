@@ -22,20 +22,20 @@ namespace DT.PipeAndFilter
 
             Output output = new Output("output.txt");
 
-            LinkedList<String> list1, list2, list3;
-            list1 = new LinkedList<string>();
-            list2 = new LinkedList<string>();
-            list3 = new LinkedList<string>();
+            LinkedList<String> pipe1, pipe2, pipe3;
+            pipe1 = new LinkedList<string>();
+            pipe2 = new LinkedList<string>();
+            pipe3 = new LinkedList<string>();
 
-            Rotator filter1 = new Rotator(list1, list2);
-            Indexor filter2 = new Indexor(list2, list3);
+            Rotator filter1 = new Rotator(pipe1, pipe2);
+            Indexor filter2 = new Indexor(pipe2, pipe3);
 
-            list1.AddLast("Pattern-Orientated Software Architecture /");
-            list1.AddLast("Software Architecture /");
-            list1.AddLast("Introducing Design Patterns /");
+            pipe1.AddLast("Pattern-Orientated Software Architecture /");
+            pipe1.AddLast("Software Architecture /");
+            pipe1.AddLast("Introducing Design Patterns /");
 
-            Thread rotateThread1 = new Thread(delegate () { filter1.Rotate(); });
-            Thread indexThread1  = new Thread(delegate () { filter2.Index(); });
+            Thread rotateThread1 = new Thread(delegate () { filter1.Start(); });
+            Thread indexThread1  = new Thread(delegate () { filter2.Start(); });
 
             // Start threads.
             rotateThread1.Start();

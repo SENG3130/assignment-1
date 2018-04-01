@@ -28,7 +28,7 @@ namespace DT.PipeAndFilter
            
         }
 
-        public void Index()
+        public void Start()
         {
             // Waits indefinitely for its input list's size > 0
             while (input.Count == 0)

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{449842E6-4E82-4173-9C86-A9599C9A68C2}</ProjectGuid>
+    <ProjectGuid>{96D0A76A-3F8E-477E-8FBC-F9F6F107373A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ADT</RootNamespace>
-    <AssemblyName>ADT</AssemblyName>
+    <RootNamespace>DT.ADT</RootNamespace>
+    <AssemblyName>DT.ADT</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,8 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="ADT.cs" />
+    <Compile Include="Indexor.cs" />
+    <Compile Include="Inputter.cs" />
+    <Compile Include="Outputter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rotator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
