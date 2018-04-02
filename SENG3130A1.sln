@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DT.PipeAndFilter", "DT.Pipe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DT.ADT", "DT.ADT\DT.ADT.csproj", "{96D0A76A-3F8E-477E-8FBC-F9F6F107373A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DT.Layered", "DT.Layered\DT.Layered.csproj", "{F8EB5347-0877-451D-8C94-63D449F0030E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{96D0A76A-3F8E-477E-8FBC-F9F6F107373A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96D0A76A-3F8E-477E-8FBC-F9F6F107373A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96D0A76A-3F8E-477E-8FBC-F9F6F107373A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8EB5347-0877-451D-8C94-63D449F0030E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8EB5347-0877-451D-8C94-63D449F0030E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8EB5347-0877-451D-8C94-63D449F0030E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8EB5347-0877-451D-8C94-63D449F0030E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
