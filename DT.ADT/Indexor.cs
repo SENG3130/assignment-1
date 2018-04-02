@@ -1,4 +1,11 @@
-﻿using System;
+﻿// File Name:   Indexor.cs
+// Developer:   Brad Turner
+//
+// Description: Alphabetically insertion sorts strings from linkedlist input to linkedlist output.
+//
+// Notes:       Sets first element of output to "/" to signal no more indexing.
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

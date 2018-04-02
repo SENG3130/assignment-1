@@ -1,4 +1,11 @@
-﻿using System;
+﻿// File Name:   ADT.cs
+// Developer:   Brad Turner
+//
+// Description: Implements an abstract data type build of a standard KWIC indexing system.
+//
+// Notes: 
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,8 +25,6 @@ namespace DT.ADT
             output.Output(idx.Index(rot.Rotate(input.Input())));
             //disadvantage have to know the signatures to all methods otherwise cant do this^.
 
-
-            Console.ReadKey();
         }
     }
 }

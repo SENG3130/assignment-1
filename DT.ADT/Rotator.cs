@@ -1,4 +1,12 @@
-﻿using System;
+﻿// File Name:   Rotator.cs
+// Developer:   Brad Turner
+//
+// Description: Sources strings from linkedlist input, circularly shifts said strings, and then appends to linkedlist output.
+//
+// Notes:       If a string is longer than 1 word, after every circular shift, also appends to linkedlist input.
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,7 +33,7 @@ namespace DT.ADT
                     // If guards against empty cases.
                     string recordShift = record.Substring(index + 1) + " " + record.Substring(0, index);
                     //DEBUG:Console.WriteLine(recordShift);
-
+                    
                     // Check if the first char is the end of line delimiter ( / ).
                     if (recordShift[0] != '/')
                     {
