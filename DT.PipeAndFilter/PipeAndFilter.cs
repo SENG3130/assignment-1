@@ -1,4 +1,4 @@
-﻿// File Name:   Program.cs
+﻿// File Name:   PipeAndFilter.cs
 // Developer:   Brad Turner
 //
 // Description: Implements a pipe filter build of a standard KWIC indexing system using threading.
@@ -18,35 +18,30 @@ namespace DT.PipeAndFilter
     {
         static void Main(string[] args)
         {
-            
-
-            Output output = new Output("output.txt");
-
+            // Creates pipes as linkedlists.
             LinkedList<String> pipe1, pipe2, pipe3;
             pipe1 = new LinkedList<string>();
             pipe2 = new LinkedList<string>();
             pipe3 = new LinkedList<string>();
 
+            // Initialises classes and links them in a pipe filter context.
+            Input input = new Input(pipe1);
+            Output output = new Output(pipe3);
             Rotator filter1 = new Rotator(pipe1, pipe2);
             Indexor filter2 = new Indexor(pipe2, pipe3);
+            
+            // Creates threads to execute almost simultaenously. 
+            Thread inputThread1 = new Thread(delegate () { input.ReadFromFile(); });
+            Thread rotateThread1 = new Thread(delegate () { filter1.Rotate(); });
+            Thread indexThread1  = new Thread(delegate () { filter2.Index(); });
+            Thread outputThread1 = new Thread(delegate () { output.WriteToFile(); });
 
-            pipe1.AddLast("Pattern-Orientated Software Architecture /");
-            pipe1.AddLast("Software Architecture /");
-            pipe1.AddLast("Introducing Design Patterns /");
-
-            Thread rotateThread1 = new Thread(delegate () { filter1.Start(); });
-            Thread indexThread1  = new Thread(delegate () { filter2.Start(); });
-
-            // Start threads.
+            // Start said threads.
+            inputThread1.Start();
             rotateThread1.Start();
             indexThread1.Start();
-            
+            outputThread1.Start();
 
-            
-            
-    
-            //Console.WriteLine("With " + filter1.Count + " permutations");
-            Console.ReadKey();
         }
     }
 }

@@ -1,4 +1,11 @@
-﻿using System;
+﻿// File Name:   Indexor.cs
+// Developer:   Brad Turner
+//
+// Description: Alphabetically insertion sorts strings from linkedlist input to linkedlist output.
+//
+// Notes:       Sets first element of output to "/" to signal no more indexing.
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,7 +35,7 @@ namespace DT.PipeAndFilter
            
         }
 
-        public void Start()
+        public void Index()
         {
             // Waits indefinitely for its input list's size > 0
             while (input.Count == 0)
@@ -73,13 +80,8 @@ namespace DT.PipeAndFilter
                     }
                 }
             }
-            output.AddFirst("");
-
-            Console.WriteLine("Output queue is:");
-            foreach (string item in output)
-            {
-                Console.WriteLine(item);
-            }
+            // Important signal to indicate end of output.
+            output.AddFirst("/");
         }
     }
 }

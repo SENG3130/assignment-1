@@ -1,4 +1,11 @@
-﻿using System;
+﻿// File Name:   Rotator.cs
+// Developer:   Brad Turner
+//
+// Description: Sources strings from linkedlist input, circularly shifts said strings, and then appends to linkedlist output.
+//
+// Notes:       If a string is longer than 1 word, after every circular shift, also appends to linkedlist input.
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,23 +17,12 @@ namespace DT.PipeAndFilter
     class Rotator
     {
         private LinkedList<string> input, output;
-        private static int numPermutations;
-        private static object obj;
-        public int Count
-        {
-            get
-            {
-                return numPermutations;
-            }
-        }
 
         public Rotator()
         {
             // Initialises two empty new queues to source from and to.
             input = new LinkedList<string>();
             output = new LinkedList<string>();
-            numPermutations = 0;
-            obj = new object();
         }
 
         public Rotator(LinkedList<string> input, LinkedList<string> output)
@@ -34,11 +30,11 @@ namespace DT.PipeAndFilter
             // Initialises the Rotator with a Queue to source from and a Queue to source to.
             this.input = input;
             this.output = output;
-            numPermutations = 0;
         }
 
-        public void Start()
+        public void Rotate()
         {
+            // Wait till the input list has size > 0.
             while (input.Count == 0)
             {
                 Thread.Sleep(20);
@@ -57,12 +53,11 @@ namespace DT.PipeAndFilter
                 {
                     // If guards against empty cases.
                     string recordShift = record.Substring(index + 1) + " " + record.Substring(0, index);
-                    Console.WriteLine(recordShift);
+                    //DEBUG:Console.WriteLine(recordShift);
                     
                     // Check if the first char is the end of line delimiter ( / ).
                     if (recordShift[0] != '/')
                     {
-                        numPermutations++;
                         input.AddLast(recordShift);
                     }
                     // Remove end of line delimeter and send to output queue

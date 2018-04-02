@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Indexor.cs" />
+    <Compile Include="Input.cs" />
     <Compile Include="Output.cs" />
     <Compile Include="PipeAndFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -50,6 +51,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="input.txt" />
+    <Content Include="output.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
