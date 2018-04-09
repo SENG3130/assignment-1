@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{33B3835E-136D-48C5-869A-AF47466B8213}</ProjectGuid>
+    <ProjectGuid>{F8EB5347-0877-451D-8C94-63D449F0030E}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DT.PipeAndFilter</RootNamespace>
-    <AssemblyName>DT.PipeAndFilter</AssemblyName>
+    <RootNamespace>CDT.Layered</RootNamespace>
+    <AssemblyName>CDT.Layered</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,12 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Indexor.cs" />
-    <Compile Include="Input.cs" />
-    <Compile Include="Output.cs" />
-    <Compile Include="PipeAndFilter.cs" />
+    <Compile Include="FileAccessLayer.cs" />
+    <Compile Include="LogicLayer.cs" />
+    <Compile Include="Layered.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rotator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -56,5 +54,6 @@
     <Content Include="input.txt" />
     <Content Include="output.txt" />
   </ItemGroup>
+  <Import Project="..\CDT.Core\CDT.Core.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,20 +5,41 @@
 //
 // Notes:       If a string is longer than 1 word, after every circular shift, also appends to linkedlist input.
 
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
-namespace DT.ADT
+namespace CDT.PipeAndFilter
 {
     class Rotator
     {
-        public LinkedList<string> Rotate(LinkedList<string> input)
+        private LinkedList<string> input, output;
+
+        public Rotator()
         {
-            LinkedList<string> output = new LinkedList<string>();
+            // Initialises two empty new queues to source from and to.
+            input = new LinkedList<string>();
+            output = new LinkedList<string>();
+        }
+
+        public Rotator(LinkedList<string> input, LinkedList<string> output)
+        {
+            // Initialises the Rotator with a Queue to source from and a Queue to source to.
+            this.input = input;
+            this.output = output;
+        }
+
+        public void Rotate()
+        {
+            // Wait till the input list has size > 0.
+            while (input.Count == 0)
+            {
+                Thread.Sleep(20);
+            }
+
             // Continually loop until the input queue is empty.
             while (input.Count > 0)
             {
@@ -40,13 +61,9 @@ namespace DT.ADT
                         input.AddLast(recordShift);
                     }
                     // Remove end of line delimeter and send to output queue
-                    output.AddLast(recordShift.Replace("/ ", "").Replace(" /", ""));
+                    output.AddLast(recordShift.Replace("/ ", "").Replace(" /",""));
                 }
             }
-
-            return output;
         }
     }
-
-
 }
