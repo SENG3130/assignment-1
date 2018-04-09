@@ -1,3 +1,0 @@
-Pattern-Orientated Software Architecture
-Software Architecture
-Introducing Design Patterns
