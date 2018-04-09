@@ -1,26 +1,57 @@
 ﻿// File Name:   Rotator.cs
-// Developer:   Brad Turner
+// Developer:   Jordan Cork
 //
-// Description: Sources strings from linkedlist input, circularly shifts said strings, and then appends to linkedlist output.
-//
-// Notes:       If a string is longer than 1 word, after every circular shift, also appends to linkedlist input.
+// Description: Implements an agent from the Blackboard Architecture which
+//               performs the rotating actino of the KWIC System
+// Notes:       
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
-namespace CDT.Core
+namespace CDT.BlackBoard
 {
     class Rotator
     {
-        public LinkedList<string> Rotate(LinkedList<string> input)
+
+        Blackboard blackboard;
+
+        public Rotator(Blackboard blackboard)
+        {
+            this.blackboard = blackboard;
+        }
+
+        public void rotate()
+        {
+            try
+            {
+                LinkedList<string> list;
+
+                // Accesses blackboard and gets list
+                list = blackboard.getList();
+
+                list = Rotate(list); // The KWIC operation is performed on the list
+
+                // Blackboard is accessed and the new list is stored
+                blackboard.setList(list);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception: " + e.Message);
+            }
+
+        }
+
+        private LinkedList<string> Rotate(LinkedList<string> list)
         {
             LinkedList<string> output = new LinkedList<string>();
             // Continually loop until the input queue is empty.
-            while (input.Count > 0)
+            while (list.Count > 0)
             {
                 // Get from the input queue.
-                string record = input.First();
-                input.RemoveFirst();
+                string record = list.First();
+                list.RemoveFirst();
 
                 // Rotate the record by one word.
                 int index = record.IndexOf(" ");
@@ -28,21 +59,19 @@ namespace CDT.Core
                 {
                     // If guards against empty cases.
                     string recordShift = record.Substring(index + 1) + " " + record.Substring(0, index);
-                    //DEBUG:Console.WriteLine(recordShift);
-                    
+                    Console.WriteLine(recordShift);
+
                     // Check if the first char is the end of line delimiter ( / ).
                     if (recordShift[0] != '/')
                     {
-                        input.AddLast(recordShift);
+                        list.AddLast(recordShift);
                     }
                     // Remove end of line delimeter and send to output queue
                     output.AddLast(recordShift.Replace("/ ", "").Replace(" /", ""));
                 }
             }
-
             return output;
         }
+
     }
-
-
 }

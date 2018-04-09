@@ -1,33 +1,59 @@
-﻿// File Name:   Outputter.cs
-// Developer:   Brad Turner
+﻿// File Name:   Outputer.cs
+// Developer:   Jordan Cork
 //
-// Description: Writes the contents of the linkedlist input to file specified by FileName.
-//
-// Notes:       
+// Description: Implements an agent from the Blackboard Architecture which
+//              writes the output of the KWIC System to a file
+// Notes:     
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.IO;
+using CDT.BlackBoard;
 
-namespace CDT.Core
+namespace CDT.BlackBoard
 {
-    class Outputter
+    class Outputer
     {
-        private string FileName;
 
-        public Outputter()
+        Blackboard blackboard;
+
+        public Outputer(Blackboard blackboard)
         {
-            FileName = "../../output.txt";
+            this.blackboard = blackboard;
         }
 
-        public void Output(LinkedList<string> input)
+        public void outputList()
         {
-            // Write each node to file.
+
             try
             {
-                StreamWriter sw = new StreamWriter(FileName);
+                LinkedList<string> list;
 
-                foreach (string node in input)
+                // Accesses blackboard and gets list (sorted list)
+                list = blackboard.getList();
+
+                WriteToFile(list); // Writes list to output file
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception: " + e.Message);
+            }
+
+
+        }
+
+        public void WriteToFile(LinkedList<string> list)
+        {
+            // Write each node to file.
+
+            try
+            {
+                String outputFile = "../../output.txt";
+                StreamWriter sw = new StreamWriter(outputFile);
+
+                foreach (string node in list)
                 {
                     sw.WriteLine(node);
                 }
@@ -40,5 +66,6 @@ namespace CDT.Core
                 Console.ReadKey();
             }
         }
+
     }
 }
