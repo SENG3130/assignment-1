@@ -20,9 +20,9 @@ namespace CDT.BlackBoard
 
             // Initialise Agents which access blackboard
             InputReader inputReader = new InputReader(blackboard);
-            Rotator rotator = new Rotator(blackboard);
+            BlackboardRotator rotator = new BlackboardRotator(blackboard);
             Sorter sorter = new Sorter(blackboard);
-            Outputer outputer = new Outputer(blackboard);
+            BlackboardOutputer outputer = new BlackboardOutputer(blackboard);
 
             try
             {

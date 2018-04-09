@@ -45,10 +45,13 @@
     <Compile Include="BlackboardMain.cs" />
     <Compile Include="InputReader.cs" />
     <Compile Include="Sorter.cs" />
+    <Compile Include="BlackboardOutputter.cs" />
+    <Compile Include="BlackboardRotator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Input.txt" />
     <None Include="output.txt" />
+    <None Include="Inputter.config" />
   </ItemGroup>
   <Import Project="..\CDT.Core\CDT.Core.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
