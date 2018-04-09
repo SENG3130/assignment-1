@@ -13,12 +13,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDT.PublishSubscribe", "CDT
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CDT.Core", "CDT.Core\CDT.Core.shproj", "{841F1611-4A76-401C-B741-85877DA2C06E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDT.BlackBoard", "CDT.BlackBoard\CDT.BlackBoard.csproj", "{AA479F87-4D09-44D2-BF25-76A76633CB08}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		CDT.Core\CDT.Core.projitems*{33b3835e-136d-48c5-869a-af47466b8213}*SharedItemsImports = 4
 		CDT.Core\CDT.Core.projitems*{841f1611-4a76-401c-b741-85877da2c06e}*SharedItemsImports = 13
 		CDT.Core\CDT.Core.projitems*{96d0a76a-3f8e-477e-8fbc-f9f6f107373a}*SharedItemsImports = 4
 		CDT.Core\CDT.Core.projitems*{a6aa368d-c1a1-4762-8e26-3bf9c15580db}*SharedItemsImports = 4
+		CDT.Core\CDT.Core.projitems*{aa479f87-4d09-44d2-bf25-76a76633cb08}*SharedItemsImports = 4
 		CDT.Core\CDT.Core.projitems*{f8eb5347-0877-451d-8c94-63d449f0030e}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +45,10 @@ Global
 		{A6AA368D-C1A1-4762-8E26-3BF9C15580DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6AA368D-C1A1-4762-8E26-3BF9C15580DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6AA368D-C1A1-4762-8E26-3BF9C15580DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA479F87-4D09-44D2-BF25-76A76633CB08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA479F87-4D09-44D2-BF25-76A76633CB08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA479F87-4D09-44D2-BF25-76A76633CB08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA479F87-4D09-44D2-BF25-76A76633CB08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
