@@ -15,6 +15,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CDT.Core", "CDT.Core\CDT.Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDT.BlackBoard", "CDT.BlackBoard\CDT.BlackBoard.csproj", "{AA479F87-4D09-44D2-BF25-76A76633CB08}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDT.InteractiveKWIC", "CDT.InteractiveKWIC\CDT.InteractiveKWIC.csproj", "{CA533136-6253-47AA-B75E-A084AAD079BA}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		CDT.Core\CDT.Core.projitems*{33b3835e-136d-48c5-869a-af47466b8213}*SharedItemsImports = 4
@@ -49,6 +51,10 @@ Global
 		{AA479F87-4D09-44D2-BF25-76A76633CB08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA479F87-4D09-44D2-BF25-76A76633CB08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA479F87-4D09-44D2-BF25-76A76633CB08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA533136-6253-47AA-B75E-A084AAD079BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA533136-6253-47AA-B75E-A084AAD079BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA533136-6253-47AA-B75E-A084AAD079BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA533136-6253-47AA-B75E-A084AAD079BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
