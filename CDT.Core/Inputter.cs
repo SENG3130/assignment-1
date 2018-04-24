@@ -14,10 +14,25 @@ namespace CDT.Core
     class Inputter
     {
         private string FileName;
+
+        public Inputter(string[] args)
+        {
+            if (args.Length > 0)
+            {
+                FileName = "../../../" + args[0];
+            }
+
+            else
+            {
+                FileName = "../../../input.txt";
+            }
+        }
+
         public Inputter()
         {
-            FileName = "../../input.txt";
+            FileName = "../../../input.txt";
         }
+
         public LinkedList<string> Input()
         {
             LinkedList<string> output = new LinkedList<string>();

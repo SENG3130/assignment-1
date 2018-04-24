@@ -16,9 +16,9 @@ namespace CDT.Layered
 {
     class LogicLayer
     {
-        public void Logicify()
+        public void Logicify(string[] args)
         {
-            FileAccessLayer fal = new FileAccessLayer();
+            FileAccessLayer fal = new FileAccessLayer(args);
             fal.WriteToFile(Index(Rotate(fal.ReadFromFile())));
         }
 

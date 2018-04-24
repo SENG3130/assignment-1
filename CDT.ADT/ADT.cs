@@ -18,10 +18,10 @@ namespace CDT.ADT
     {
         static void Main(string[] args)
         {
-            Inputter input = new Inputter();
+            Inputter input = new Inputter(args);
             Rotator rot = new Rotator();
             Indexor idx = new Indexor();
-            Outputter output = new Outputter();
+            Outputter output = new Outputter(args);
 
             output.Output(idx.Index(rot.Rotate(input.Input())));
             //disadvantage have to know the signatures to all methods otherwise cant do this^.

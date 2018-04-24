@@ -18,10 +18,33 @@ namespace CDT.Layered
     {
         private string inputFile, outputFile;
 
+        public FileAccessLayer(string[] args)
+        {
+            if (args.Length > 0)
+            {
+                inputFile = "../../../" + args[0];
+            }
+
+            else
+            {
+                inputFile = "../../../input.txt";
+            }
+
+            if (args.Length > 1)
+            {
+                outputFile = "../../../" + args[0];
+            }
+
+            else
+            {
+                outputFile = "../../../output.txt";
+            }
+        }
+
         public FileAccessLayer()
         {
-            inputFile = "../../input.txt";
-            outputFile = "../../output.txt";
+            inputFile = "../../../input.txt";
+            outputFile = "../../../output.txt";
         }
 
         public LinkedList<string> ReadFromFile()

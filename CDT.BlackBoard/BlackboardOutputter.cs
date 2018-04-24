@@ -49,7 +49,7 @@ namespace CDT.BlackBoard
 
             try
             {
-                String outputFile = "../../output.txt";
+                String outputFile = "../../../output.txt";
                 StreamWriter sw = new StreamWriter(outputFile);
 
                 foreach (string node in list)

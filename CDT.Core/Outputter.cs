@@ -15,9 +15,22 @@ namespace CDT.Core
     {
         private string FileName;
 
+        public Outputter(string[] args)
+        {
+            if (args.Length > 1)
+            {
+                FileName = "../../../" + args[2];
+            }
+
+            else
+            {
+                FileName = "../../../output.txt";
+            }
+        }
+
         public Outputter()
         {
-            FileName = "../../output.txt";
+            FileName = "../../../output.txt";
         }
 
         public void Output(LinkedList<string> input)

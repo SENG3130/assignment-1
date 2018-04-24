@@ -22,13 +22,45 @@ namespace CDT.PipeAndFilter
 
         public Output()
         {
-            this.FileName = "../../output.txt";
+            this.FileName = "../../../output.txt";
+
             input = new LinkedList<string>();
+        }
+
+        public Output(string[] args)
+        {
+            if (args.Length > 0)
+            {
+                FileName = "../../../" + args[0];
+            }
+
+            else
+            {
+                FileName = "../../../output.txt";
+            }
+
+            this.input = new LinkedList<string>();
+        }
+
+        public Output(string[] args, LinkedList<string> input)
+        {
+            if (args.Length > 0)
+            {
+                FileName = "../../../" + args[0];
+            }
+
+            else
+            {
+                FileName = "../../../output.txt";
+            }
+
+            this.input = input;
         }
 
         public Output(LinkedList<string> input)
         {
-            this.FileName = "../../output.txt";
+            this.FileName = "../../../output.txt";
+
             this.input = input;
         }
 

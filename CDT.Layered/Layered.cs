@@ -18,7 +18,7 @@ namespace CDT.Layered
         static void Main(string[] args)
         {
             LogicLayer ll = new LogicLayer();
-            ll.Logicify();
+            ll.Logicify(args);
         }
     }
 }
