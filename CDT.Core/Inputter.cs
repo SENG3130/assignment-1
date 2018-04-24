@@ -35,6 +35,10 @@ namespace CDT.Core
 
         public LinkedList<string> Input()
         {
+#if DEBUG
+            Console.WriteLine(DateTime.Now + " Inputter.Input started");
+#endif
+
             LinkedList<string> output = new LinkedList<string>();
             try
             {
@@ -55,6 +59,11 @@ namespace CDT.Core
                 Console.WriteLine("Exception: " + e.Message);
                 Console.ReadKey();
             }
+
+#if DEBUG
+            Console.WriteLine(DateTime.Now + " Inputter.Input finished");
+#endif
+
             return output;
         }
     }

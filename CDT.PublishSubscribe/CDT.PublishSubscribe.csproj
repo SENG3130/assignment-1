@@ -44,10 +44,6 @@
     <Compile Include="PublishSubscribe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="input.txt" />
-    <Content Include="output.txt" />
-  </ItemGroup>
   <Import Project="..\CDT.Core\CDT.Core.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

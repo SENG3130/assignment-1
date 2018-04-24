@@ -8,6 +8,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 
 namespace CDT.Core
 {
@@ -15,6 +16,10 @@ namespace CDT.Core
     {
         public LinkedList<string> Index(LinkedList<string> input)
         {
+#if DEBUG
+            Console.WriteLine(DateTime.Now + " Indexor.Index started");
+#endif
+
             LinkedList<string> output = new LinkedList<string>();
 
             while (input.Count > 0)
@@ -53,6 +58,10 @@ namespace CDT.Core
                     }
                 }
             }
+
+#if DEBUG
+            Console.WriteLine(DateTime.Now + " Indexor.Index finished");
+#endif
 
             return output;
         }

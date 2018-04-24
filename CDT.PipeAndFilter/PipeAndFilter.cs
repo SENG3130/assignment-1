@@ -22,8 +22,8 @@ namespace CDT.PipeAndFilter
             pipe3 = new LinkedList<string>();
 
             // Initialises classes and links them in a pipe filter context.
-            Input input = new Input(pipe1);
-            Output output = new Output(pipe3);
+            Input input = new Input(args, pipe1);
+            Output output = new Output(args, pipe3);
             Rotator filter1 = new Rotator(pipe1, pipe2);
             Indexor filter2 = new Indexor(pipe2, pipe3);
             

@@ -7,6 +7,7 @@
 
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace CDT.Core
 {
@@ -14,6 +15,10 @@ namespace CDT.Core
     {
         public LinkedList<string> Rotate(LinkedList<string> input)
         {
+#if DEBUG
+            Console.WriteLine(DateTime.Now + " Rotator.Rotate started");
+#endif
+
             LinkedList<string> output = new LinkedList<string>();
             // Continually loop until the input queue is empty.
             while (input.Count > 0)
@@ -39,6 +44,10 @@ namespace CDT.Core
                     output.AddLast(recordShift.Replace("/ ", "").Replace(" /", ""));
                 }
             }
+
+#if DEBUG
+            Console.WriteLine(DateTime.Now + " Rotator.Rotate finished");
+#endif
 
             return output;
         }

@@ -35,6 +35,10 @@ namespace CDT.Core
 
         public void Output(LinkedList<string> input)
         {
+#if DEBUG
+            Console.WriteLine(DateTime.Now + " Outputter.Output started");
+#endif
+
             // Write each node to file.
             try
             {
@@ -52,6 +56,10 @@ namespace CDT.Core
                 Console.WriteLine("Exception: " + e.Message);
                 Console.ReadKey();
             }
+
+#if DEBUG
+            Console.WriteLine(DateTime.Now + " Outputter.Output finished");
+#endif
         }
     }
 }
