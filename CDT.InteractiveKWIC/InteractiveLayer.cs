@@ -27,18 +27,24 @@ namespace CDT.InteractiveKWIC
             while (true)
             {
                 // User Prompt
-                Console.WriteLine("Add, Delete, Print, Quit: ");
+                Console.Write("Add, Delete, Print, Quit: ");
 
                 option = Console.ReadLine();
 
                 if (object.Equals(option, "a")) // Add line
                 {
+                    Console.Write("> ");
+
                     line = Console.ReadLine();
+
                     addLine(line);
                 }
                 else if (object.Equals(option, "d")) // Delete line
                 {
+                    Console.Write("> ");
+
                     line = Console.ReadLine();
+
                     deleteLine(line);
                 }
                 else if (object.Equals(option, "p")) // Print KWIC list

@@ -1,4 +1,4 @@
-﻿// File Name:   InteractiveLayered.cs
+﻿// File Name:   InteractiveKWIC.cs
 // Developer:   Jordan Cork
 //
 // Description: Implements a stardard 3-tier layered build of an interactive KWIC indexing system..
@@ -8,7 +8,7 @@
 
 namespace CDT.InteractiveKWIC
 {
-    class InteractiveLayered
+    class InteractiveKWIC
     {
         static void Main(string[] args)
         {
