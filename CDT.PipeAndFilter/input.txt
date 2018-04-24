@@ -1,4 +1,0 @@
-﻿Pattern-Orientated Software Architecture
-Software Architecture
-Introducing Design Patterns
-Brad's Big Book of Beautiful Butterflies
