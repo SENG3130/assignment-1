@@ -33,7 +33,7 @@ namespace CDT.Core
             FileName = "../../../output.txt";
         }
 
-        public void Output(LinkedList<string> input)
+        public void Output(List<string> input)
         {
 #if DEBUG
             Console.WriteLine(DateTime.Now + " Outputter.Output started");

@@ -66,6 +66,10 @@ namespace CDT.PipeAndFilter
 
         public void WriteToFile()
         {
+#if DEBUG
+            Console.WriteLine(DateTime.Now + " Output.WriteToFile started");
+#endif
+
             // Wait for input to have a size > 0.
             while (input.Count == 0)
             {
@@ -97,6 +101,10 @@ namespace CDT.PipeAndFilter
                 Console.WriteLine("Exception: " + e.Message);
                 Console.ReadKey();
             }
+
+#if DEBUG
+            Console.WriteLine(DateTime.Now + " Output.WriteToFile finished");
+#endif
         }
     }
 }

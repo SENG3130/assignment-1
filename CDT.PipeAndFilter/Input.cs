@@ -65,6 +65,10 @@ namespace CDT.PipeAndFilter
 
         public void ReadFromFile()
         {
+#if DEBUG
+            Console.WriteLine(DateTime.Now + " Input.ReadFromFile started");
+#endif
+
             try
             {
                 // Open StreamReader to read from file FileName.
@@ -84,7 +88,10 @@ namespace CDT.PipeAndFilter
                 Console.WriteLine("Exception: " + e.Message);
                 Console.ReadKey();
             }
-            
+
+#if DEBUG
+            Console.WriteLine(DateTime.Now + " Input.ReadFromFile finished");
+#endif
         }
     }
 }

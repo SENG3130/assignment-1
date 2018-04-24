@@ -31,7 +31,7 @@ namespace CDT.PublishSubscribe
             });
 
             Bus.Register("index-completed", delegate (object data) {
-                outputter.Output((LinkedList<string>)data);
+                outputter.Output((List<string>)data);
 
                 Bus.Fire("output-completed");
             });

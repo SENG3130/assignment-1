@@ -34,6 +34,10 @@ namespace CDT.PipeAndFilter
 
         public void Rotate()
         {
+#if DEBUG
+            Console.WriteLine(DateTime.Now + " Rotator.Rotate started");
+#endif
+
             // Wait till the input list has size > 0.
             while (input.Count == 0)
             {
@@ -64,6 +68,10 @@ namespace CDT.PipeAndFilter
                     output.AddLast(recordShift.Replace("/ ", "").Replace(" /",""));
                 }
             }
+
+#if DEBUG
+            Console.WriteLine(DateTime.Now + " Rotator.Rotate finished");
+#endif
         }
     }
 }

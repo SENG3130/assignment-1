@@ -37,12 +37,16 @@ namespace CDT.PipeAndFilter
 
         public void Index()
         {
+#if DEBUG
+            Console.WriteLine(DateTime.Now + " Indexor.Index started");
+#endif
+            
             // Waits indefinitely for its input list's size > 0
             while (input.Count == 0)
             {
-                Thread.Sleep(5);
+                Thread.Sleep(20);
             }
-            
+
 
             while (input.Count > 0)
             {
@@ -82,6 +86,10 @@ namespace CDT.PipeAndFilter
             }
             // Important signal to indicate end of output.
             output.AddFirst("/");
+
+#if DEBUG
+            Console.WriteLine(DateTime.Now + " Indexor.Index finished");
+#endif
         }
     }
 }
